@@ -141,8 +141,8 @@ Cookies.set('authToken', token, {
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/francatti/PUCRS_MedRH-Front.git
-cd PUCRS_MedRH-Front
+git clone https://github.com/francatti/PUCRS_MedShare-Front.git
+cd PUCRS_MedShare-Front
 ```
 
 2. **Instale as dependências**
@@ -197,24 +197,25 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 
 // Componentes
-import Button from '../../components/common/Button';
+import Button from '../common/Button';
 
-// Serviços e utils
-import { userService } from '../../services/api';
+// Utilitários
+import { formatDate } from '../../utils/date';
 ```
 
-## 🧪 Testes (Futuro)
+## 🧪 Testes
 
-### Estratégia de Testes
-- **Unit Tests**: Jest + React Testing Library
-- **Integration Tests**: Cypress ou Playwright
-- **E2E Tests**: Cypress
-- **Visual Regression**: Chromatic
+### Ferramentas de Teste
+- **Jest** - Framework de testes
+- **React Testing Library** - Testes de componentes
+- **MSW** - Mock Service Worker para API
 
-### Coverage Mínimo
-- 80% para componentes críticos
-- 60% para componentes utilitários
-- 90% para services e utils
+### Executar Testes
+```bash
+npm test              # Modo watch
+npm run test:coverage # Com coverage
+npm run test:ci       # Para CI/CD
+```
 
 ## 📦 Build e Deploy
 
@@ -224,68 +225,49 @@ npm run build
 ```
 
 ### Otimizações Incluídas
-- Code splitting automático
-- Tree shaking
-- Minificação de assets
-- Compressão gzip
-- Cache busting
+- **Code splitting** automático
+- **Tree shaking** para remoção de código não usado
+- **Minificação** de CSS e JS
+- **Compressão gzip**
+- **Service Worker** para cache
 
-### Deploy Recomendado
-- **Netlify** (recomendado para demo)
-- **Vercel** (integração com Git)
-- **AWS S3 + CloudFront**
-- **Nginx** (servidor próprio)
-
-## 🔗 Integração com Backend
-
-### Base URL da API
-```typescript
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+### Deploy Vercel
+```bash
+vercel --prod
 ```
 
-### Estrutura de Endpoints
-```typescript
-// Autenticação
-POST /auth/login
-POST /auth/register
-POST /auth/forgot-password
+## 🤝 Contribuição
 
-// Usuário
-GET /users/profile
-PUT /users/profile
-DELETE /users/account
+### Padrões de Código
+- **ESLint** - Linting de código
+- **Prettier** - Formatação automática
+- **Conventional Commits** - Padrão de commits
+- **Husky** - Git hooks
 
-// Informações médicas
-GET /medical/info
-PUT /medical/info
-
-// Contatos de emergência
-GET /emergency-contacts
-POST /emergency-contacts
-PUT /emergency-contacts/:id
-DELETE /emergency-contacts/:id
-
-// Público
-POST /public/access/:uuid
-```
+### Workflow de Desenvolvimento
+1. Fork do repositório
+2. Criar branch feature (`git checkout -b feature/nova-funcionalidade`)
+3. Commit das mudanças (`git commit -m 'feat: adiciona nova funcionalidade'`)
+4. Push para branch (`git push origin feature/nova-funcionalidade`)
+5. Abrir Pull Request
 
 ## 📄 Licença
 
-Este projeto é uma aplicação acadêmica desenvolvida para a PUCRS e não possui licença comercial.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Contribuidores
+## 👥 Equipe
 
-- **Equipe MedShare** - Desenvolvimento
-- **PUCRS** - Orientação acadêmica
+- **Desenvolvedor Frontend**: Nicholas Francatti
+- **Projeto Acadêmico**: PUCRS
+- **Orientação**: [Nome do Professor]
 
 ## 📞 Suporte
 
-Para dúvidas ou problemas:
-1. Verifique a documentação do backend
-2. Confirme se as variáveis de ambiente estão corretas
-3. Verifique se o backend está rodando
-4. Consulte os logs do navegador (F12)
+Para dúvidas ou suporte:
+- 📧 Email: [seu-email]
+- 💬 GitHub Issues: [link]
+- 📱 WhatsApp: [número]
 
 ---
 
-**MedShare** © 2025 - Projeto Acadêmico PUCRS 
+⭐ **Desenvolvido com React.js para PUCRS** ⭐
