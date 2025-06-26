@@ -251,23 +251,9 @@ vercel --prod
 4. Push para branch (`git push origin feature/nova-funcionalidade`)
 5. Abrir Pull Request
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 👥 Equipe
 
-- **Desenvolvedor Frontend**: Nicholas Francatti
+- **Desenvolvedor**: Nicholas Francatti
 - **Projeto Acadêmico**: PUCRS
-- **Orientação**: [Nome do Professor]
 
-## 📞 Suporte
-
-Para dúvidas ou suporte:
-- 📧 Email: [seu-email]
-- 💬 GitHub Issues: [link]
-- 📱 WhatsApp: [número]
-
----
-
-⭐ **Desenvolvido com React.js para PUCRS** ⭐
